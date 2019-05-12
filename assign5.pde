@@ -44,7 +44,7 @@ int playerMoveDuration = 15;
 boolean demoMode = false;
 
 void setup() {
-	size(640, 480 );
+	size(640, 480 , P2D );
 	frameRate(60);
 	bg = loadImage("img/bg.jpg");
 	title = loadImage("img/title.jpg");
@@ -582,8 +582,8 @@ String convertFramesToTimeString( int frames ){	// Requirement #4
   else if(frames >= 10800){sec = frames / 60 - 180; println("opps");}
   else if(frames < 3600){sec = frames / 60;}
   
-  String showMin = nf( min , 2 , 0 );
-  String showSec = nf( sec , 2 , 0 );
+  String showMin = nf( min , 2 , 1 );
+  String showSec = nf( sec , 2 , 1 );
  
 	return showMin + ":" + showSec ;
 
