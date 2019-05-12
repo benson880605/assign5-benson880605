@@ -573,17 +573,15 @@ boolean isHit(float ax, float ay, float aw, float ah, float bx, float by, float 
 
 String convertFramesToTimeString( int frames ){	// Requirement #4
 
-  int min;
   int sec = 0 ;
+  int min = (int)frames / 3600 ;
+  if(frames >= 3600 && frames < 7200 ){sec = (int)frames / 60 - 60;}
+  else if((int)frames >= 7200 && frames < 10800 ){sec = (int)frames / 60 - 120;}
+  else if((int)frames >= 10800){sec = (int)frames / 60 - 180;}
+  else if((int)frames < 3600){sec = (int)frames / 60;}
   
-  min = (int)frames / 3600 ;
-  if(frames >= 3600 && frames < 7200 ){sec = frames / 60 - 60;}
-  else if(frames >= 7200 && frames < 10800 ){sec = frames / 60 - 120;}
-  else if(frames >= 10800){sec = frames / 60 - 180; println("opps");}
-  else if(frames < 3600){sec = frames / 60;}
-  
-  String showMin = nf( min , 2 , 0 );
-  String showSec = nf( sec , 2 , 0 );
+  String showMin = nf( (int)min , 2 , 0 );
+  String showSec = nf( (int)sec , 2 , 0 );
  
 	return showMin + ":" + showSec ;
 
