@@ -6,7 +6,7 @@ PImage[][] soils, stones;
 PFont font;
 
 final int GAME_START = 0, GAME_RUN = 1, GAME_OVER = 2, GAME_WIN = 3;
-int gameState = 1;
+int gameState = 0;
 
 final int GRASS_HEIGHT = 15;
 final int SOIL_COL_COUNT = 8;
