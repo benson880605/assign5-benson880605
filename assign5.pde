@@ -580,8 +580,8 @@ String convertFramesToTimeString( int frames ){	// Requirement #4
   else if((int)frames >= 10800){sec = (int)frames / 60 - 180;}
   else if((int)frames < 3600){sec = (int)frames / 60;}
   
-  String showMin = nf( (int)min , 2 , 0 );
-  String showSec = nf( (int)sec , 2 , 0 );
+  String showMin = nf( (int)min , 2  );
+  String showSec = nf( (int)sec , 2  );
  
 	return showMin + ":" + showSec ;
 
