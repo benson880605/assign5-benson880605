@@ -576,7 +576,7 @@ String convertFramesToTimeString( int frames ){	// Requirement #4
   int min;
   int sec = 0 ;
   
-  min = frames / 3600 ;
+  min = (int)frames / 3600 ;
   if(frames >= 3600 && frames < 7200 ){sec = frames / 60 - 60;}
   else if(frames >= 7200 && frames < 10800 ){sec = frames / 60 - 120;}
   else if(frames >= 10800){sec = frames / 60 - 180; println("opps");}
